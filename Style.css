@@ -522,7 +522,7 @@ body {
     text-align: center;
     color: var(--white);
     /* Replace 'school-gate.jpg' with your actual image path */
-    background: url('Assets/Image/SHK.png') center/cover no-repeat;
+    background: url('SHK.png') center/cover no-repeat;
     overflow: hidden;
 }
 
