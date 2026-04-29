@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Standard Hill S.S | Admin Login</title>
+    <style>
+        /* CSS Variables for easy color management */
+        :root {
+            --primary-blue: #003366;
+            --accent-blue: #0056b3;
+            --white: #ffffff;
+            --glass-bg: rgba(255, 255, 255, 0.9);
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow: hidden; /* Prevents scrolling during loading */
+        }
+
+        /* Background Image Layer */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Replace the URL below with your actual school image link */
+            background: linear-gradient(rgba(0, 51, 102, 0.7), rgba(0, 51, 102, 0.7)), 
+                        url('Assets/Image/SHK.png') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+        }
+
+        .container {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .admin-card {
+            background: var(--glass-bg);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            width: 350px;
+            color: var(--primary-blue);
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 24px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .motto {
+            font-size: 14px;
+            color: #555;
+            margin-top: 10px;
+            font-style: italic;
+        }
+
+        /* Loading Bar Styles */
+        .loader-container {
+            width: 100%;
+            background-color: #ddd;
+            height: 10px;
+            border-radius: 5px;
+            margin-top: 30px;
+            overflow: hidden;
+        }
+
+        .loader-fill {
+            height: 100%;
+            width: 0%;
+            background-color: var(--primary-blue);
+            transition: width 0.1s linear;
+        }
+
+        .status-text {
+            margin-top: 15px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="background"></div>
+
+    <div class="container">
+        <div class="admin-card">
+            <div style="font-size: 40px; margin-bottom: 10px;">🛡️</div>
+            <h1>Standard Hill S.S</h1>
+            <div class="motto">"Our Utmost is Excellence"</div>
+            
+            <p style="margin-top: 25px; font-weight: bold;">ADMINISTRATION PORTAL</p>
+
+            <div class="loader-container">
+                <div id="progress" class="loader-fill"></div>
+            </div>
+            <div class="status-text" id="status">Verifying Credentials...</div>
+        </div>
+    </div>
+
+    <script>
+        // Simple script to handle the loading animation and redirection
+        let progress = document.getElementById('progress');
+        let status = document.getElementById('status');
+        let width = 0;
+
+        let interval = setInterval(() => {
+            if (width >= 100) {
+                clearInterval(interval);
+                status.innerText = "Access Granted. Redirecting...";
+                setTimeout(() => {
+                    // This redirects to your admin-home.html page
+                    window.location.href = "admin-home.html";
+                }, 500);
+            } else {
+                width += 2; // Speed of the loading bar
+                progress.style.width = width + '%';
+                
+                if(width > 40) status.innerText = "Loading Database...";
+                if(width > 80) status.innerText = "Finalizing Session...";
+            }
+        }, 50); // Adjust time for faster/slower loading
+    </script>
+
+</body>
+</html>

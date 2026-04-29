@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent Portal | School Management System</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="Parents.css">
+    <script src="Parents.js" defer></script>
+
+</head>
+<body>
+
+<div class="sidebar d-flex flex-column">
+    <div class="text-center mb-4">
+        <h4>SMS Portal</h4>
+        <small class="text-muted">Parent Access</small>
+    </div>
+    <nav class="nav flex-column">
+        <a class="nav-link active" href="#dashboard"><i class="fas fa-home me-2"></i> Dashboard</a>
+        <a class="nav-link" href="#attendance"><i class="fas fa-calendar-check me-2"></i> Attendance</a>
+        <a class="nav-link" href="#academics"><i class="fas fa-graduation-cap me-2"></i> Performance</a>
+        <a class="nav-link" href="#schedule"><i class="fas fa-clock me-2"></i> Timetable</a>
+        <a class="nav-link" href="#billing"><i class="fas fa-wallet me-2"></i> Fees & Billing</a>
+        <a class="nav-link" href="#messages"><i class="fas fa-envelope me-2"></i> Messages</a>
+        <a class="nav-link" href="#resources"><i class="fas fa-file-download me-2"></i> Documents</a>
+        <a class="nav-link" href="#requests"><i class="fas fa-edit me-2"></i> Requests/Forms</a>
+        <hr class="mx-3 my-2">
+        <a class="nav-link" href="#profile"><i class="fas fa-user-circle me-2"></i> My Profile</a>
+        <a class="nav-link text-danger" href="/logout"><i class="fas fa-sign-out-alt me-2"></i> Logout</a>
+    </nav>
+</div>
+
+<div class="main-content">
+    
+    <header class="d-flex justify-content-between align-items-center mb-4">
+        <h2 id="section-title">Parent Dashboard</h2>
+        <div class="dropdown">
+            <button class="btn btn-white border dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                <i class="fas fa-child me-2"></i> Switching Student: <strong>John Doe</strong>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">John Doe (Grade 10-A)</a></li>
+                <li><a class="dropdown-item" href="#">Jane Doe (Grade 7-B)</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <div class="row g-3 mb-4">
+        <div class="col-md-3">
+            <div class="card card-stat shadow-sm p-3">
+                <small class="text-muted text-uppercase fw-bold">Attendance Today</small>
+                <h4 class="text-success">Present</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-stat shadow-sm p-3" style="border-left-color: #f1c40f;">
+                <small class="text-muted text-uppercase fw-bold">New Notices</small>
+                <h4>3</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-stat shadow-sm p-3" style="border-left-color: #9b59b6;">
+                <small class="text-muted text-uppercase fw-bold">Latest Grade</small>
+                <h4>A- (Maths)</h4>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card card-stat shadow-sm p-3" style="border-left-color: #e74c3c;">
+                <small class="text-muted text-uppercase fw-bold">Outstanding Fees</small>
+                <h4>$450.00</h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-8">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white fw-bold">Student Information</div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <p><strong>Name:</strong> John Doe</p>
+                            <p><strong>Class:</strong> Grade 10 - Section A</p>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><strong>Academic Year:</strong> 2023/2024</p>
+                            <p><strong>Term:</strong> Term 2</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white fw-bold">Parent Profile</div>
+                <div class="card-body p-3 text-center">
+                    <img src="https://via.placeholder.com/60" class="rounded-circle mb-2" alt="Parent">
+                    <h6>Robert Doe</h6>
+                    <small class="text-muted">robert.doe@email.com</small><br>
+                    <small class="text-muted">+1 234 567 890</small>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white d-flex justify-content-between">
+            <span class="fw-bold">Attendance Record</span>
+            <select class="form-select form-select-sm w-auto"><option>Monthly View</option></select>
+        </div>
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="table-light">
+                    <tr>
+                        <th>Date</th>
+                        <th>Status</th>
+                        <th>Remarks</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr><td>Oct 12, 2023</td><td><span class="badge bg-success">Present</span></td><td>-</td></tr>
+                    <tr><td>Oct 13, 2023</td><td><span class="badge bg-danger">Absent</span></td><td>Sick Leave</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div class="row mb-4">
+        <div class="col-md-7">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white fw-bold">Subject Performance</div>
+                <div class="card-body">
+                    <div class="mb-3">
+                        <label class="small">Mathematics</label>
+                        <div class="progress" style="height: 10px;"><div class="progress-bar bg-success" style="width: 85%"></div></div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="small">Science</label>
+                        <div class="progress" style="height: 10px;"><div class="progress-bar bg-info" style="width: 72%"></div></div>
+                    </div>
+                    <button class="btn btn-sm btn-outline-primary mt-2">Download Report Card</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-5">
+            <div class="card shadow-sm border-0">
+                <div class="card-header bg-white fw-bold">Today's Schedule</div>
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item d-flex justify-content-between"><span>Maths</span> <small>08:00 AM</small></li>
+                    <li class="list-group-item d-flex justify-content-between"><span>Science</span> <small>10:00 AM</small></li>
+                    <li class="list-group-item d-flex justify-content-between"><span>Physical Ed</span> <small>01:00 PM</small></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm border-0 mb-4">
+        <div class="card-header bg-white fw-bold">Billing & Payments</div>
+        <div class="card-body">
+            <div class="alert alert-warning">Notice: Term 2 Tuition is due by next Friday.</div>
+            <table class="table table-sm">
+                <thead><tr><th>Fee Component</th><th>Amount</th><th>Status</th></tr></thead>
+                <tbody>
+                    <tr><td>Tuition Fee</td><td>$1,200</td><td><span class="text-success">Paid</span></td></tr>
+                    <tr><td>Lab Levy</td><td>$150</td><td><span class="text-danger">Unpaid</span></td></tr>
+                </tbody>
+            </table>
+            <button class="btn btn-primary btn-sm">Pay Outstanding Amount</button>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white fw-bold">Announcements</div>
+                <div class="card-body">
+                    <p class="small mb-1 text-primary"><strong>School Sports Day</strong></p>
+                    <p class="small text-muted">Coming up on Oct 25th. All parents invited...</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white fw-bold">Messages</div>
+                <div class="card-body text-center">
+                    <p class="text-muted small">You have 2 unread messages from Class Teacher.</p>
+                    <button class="btn btn-sm btn-outline-dark">Open Inbox</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card shadow-sm border-0 mb-4">
+                <div class="card-header bg-white fw-bold">Forms & Requests</div>
+                <div class="card-body">
+                    <a href="#" class="d-block small mb-2 text-decoration-none"><i class="fas fa-file-alt me-2"></i>Leave Application</a>
+                    <a href="#" class="d-block small mb-2 text-decoration-none"><i class="fas fa-question-circle me-2"></i>General Query</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+

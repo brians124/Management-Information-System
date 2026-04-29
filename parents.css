@@ -1,0 +1,122 @@
+/* --- Color Variables & Root --- */
+:root {
+    --primary-blue: #0d47a1;    /* Navy Blue */
+    --secondary-blue: #1976d2;  /* Royal Blue */
+    --accent-blue: #e3f2fd;     /* Light Sky Blue */
+    --white: #ffffff;
+    --text-dark: #2c3e50;
+    --sidebar-width: 250px;
+}
+
+/* --- Base Styles --- */
+body {
+    background-color: #f0f5f9;
+    color: var(--text-dark);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    margin: 0;
+}
+
+/* --- Sidebar Navigation --- */
+.sidebar {
+    background-color: var(--primary-blue);
+    min-height: 100vh;
+    color: var(--white);
+    position: fixed;
+    width: var(--sidebar-width);
+    z-index: 100;
+    transition: all 0.3s;
+}
+
+.sidebar .nav-link {
+    color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    margin: 5px 15px;
+    transition: all 0.2s ease-in-out;
+}
+
+.sidebar .nav-link:hover, 
+.sidebar .nav-link.active {
+    background-color: var(--secondary-blue);
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* --- Main Layout --- */
+.main-container {
+    margin-left: var(--sidebar-width);
+    padding: 30px;
+}
+
+/* --- Component Styling --- */
+.card {
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+    background-color: var(--white);
+    margin-bottom: 1.5rem;
+}
+
+.card-header {
+    background-color: var(--white);
+    border-bottom: 1px solid var(--accent-blue);
+    color: var(--primary-blue);
+    font-weight: 700;
+    padding: 1rem 1.25rem;
+}
+
+.stat-card {
+    background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+    color: white;
+    border: none;
+    position: relative;
+    overflow: hidden;
+}
+
+/* --- Buttons & UI Elements --- */
+.btn-blue {
+    background-color: var(--primary-blue);
+    color: white;
+    border: none;
+}
+
+.btn-blue:hover {
+    background-color: var(--secondary-blue);
+    color: white;
+}
+
+.btn-outline-blue {
+    border: 1px solid var(--primary-blue);
+    color: var(--primary-blue);
+    background: transparent;
+}
+
+.btn-outline-blue:hover {
+    background-color: var(--primary-blue);
+    color: white;
+}
+
+.badge.bg-primary {
+    background-color: var(--secondary-blue) !important;
+}
+
+/* --- Utilities --- */
+.text-small {
+    font-size: 0.875rem;
+}
+
+.status-present { color: #2ecc71; font-weight: bold; }
+.status-absent { color: #e74c3c; font-weight: bold; }
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 768px) {
+    .sidebar { 
+        width: 100%; 
+        height: auto; 
+        position: relative; 
+        min-height: auto;
+    }
+    .main-container { 
+        margin-left: 0; 
+        padding: 15px;
+    }
+}
