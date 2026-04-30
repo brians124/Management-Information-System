@@ -116,7 +116,6 @@ body {
         min-height: auto;
     }
     .main-container { 
-        margin-left: 0; 
-        padding: 15px;
+        margin-top: 0; 
     }
 }
