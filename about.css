@@ -1,0 +1,103 @@
+/* Custom Properties for Easy Updates */
+:root {
+    --primary-blue: #003366;
+    --accent-blue: #0056b3;
+    --glass-white: rgba(255, 255, 255, 0.85);
+    --text-dark: #1a1a1a;
+    --pure-white: #ffffff;
+}
+
+/* 1. Global Section Animation */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+    background: var(--pure-white);
+}
+
+/* This class triggers when the section enters the viewport */
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 2. Glassmorphism Flex Items */
+.flex-item {
+    background: var(--glass-white) !important;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 51, 102, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--primary-blue);
+}
+
+.flex-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 40px 0 rgba(0, 86, 179, 0.2);
+    border: 1px solid var(--accent-blue);
+}
+
+/* 3. Hero Section Specifics */
+.hero {
+    background: linear-gradient(135deg, var(--primary-blue), var(--accent-blue)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animated Background Shapes for the Hero */
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    top: -100px;
+    left: -100px;
+    animation: float 6s infinite alternate ease-in-out;
+}
+
+/* 4. Headers & Buttons */
+h2 {
+    color: var(--primary-blue);
+    position: relative;
+    display: inline-block;
+    width: 100%;
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--accent-blue);
+    margin: 10px auto;
+}
+
+button {
+    background: var(--primary-blue);
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+button:hover {
+    background: var(--accent-blue);
+}
+
+/* 5. Keyframe Animations */
+@keyframes float {
+    from { transform: translate(0, 0); }
+    to { transform: translate(50px, 50px); }
+}
+
+/* 6. Responsive Fixes */
+@media (max-width: 768px) {
+    .flex-container {
+        flex-direction: column;
+    }
+}

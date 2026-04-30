@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YAPS Academy | Excellence in STEM & Arts</title>
+    <!-- Simple styling to visualize the flex layout -->
+    <style>
+        body { font-family: 'Segoe UI', sans-serif; margin: 0; line-height: 1.6; color: #333; }
+        section { padding: 60px 20px; border-bottom: 1px solid #eee; }
+        .flex-container { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; }
+        .flex-item { flex: 1; min-width: 280px; padding: 20px; background: #f9f9f9; border-radius: 8px; }
+        .header-nav { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+        .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1523050335392-9ae86774929f') center/cover; color: white; text-align: center; padding: 100px 20px; }
+        img { max-width: 100%; border-radius: 5px; }
+        h2 { text-align: center; margin-bottom: 40px; color: #2c3e50; }
+        footer { background: #2c3e50; color: white; padding: 40px 20px; }
+    </style>
+    <link rel="stylesheet" href="About.css">
+    <script src="About.js" defer></script>
+</head>
+<body>
+
+    <!-- 1. NAVIGATION -->
+    <header class="header-nav">
+        <div class="logo"><strong>YAPS ACADEMY</strong></div>
+        <nav class="flex-container" style="gap: 15px;">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#academics">Academics</a>
+            <a href="#admissions">Admissions</a>
+            <a href="#contact">Contact</a>
+        </nav>
+        <button>Portal Login</button>
+    </header>
+
+    <!-- 2. HERO SECTION -->
+    <section id="home" class="hero">
+        <h1>Empowering the Next Generation of Innovators</h1>
+        <p>A Full-Feature STEM focused institution for modern excellence.</p>
+        <div class="flex-container" style="justify-content: center; margin-top: 30px;">
+            <button class="flex-item">Apply Now</button>
+            <button class="flex-item">Book a Tour</button>
+            <button class="flex-item">View Curriculum</button>
+        </div>
+    </section>
+
+    <!-- 3. QUICK HIGHLIGHTS (Stats) -->
+    <section>
+        <h2>Our Impact at a Glance</h2>
+        <div class="flex-container">
+            <div class="flex-item" style="text-align: center;"><h3>1500+</h3><p>Active Students</p></div>
+            <div class="flex-item" style="text-align: center;"><h3>98%</h3><p>University Placement</p></div>
+            <div class="flex-item" style="text-align: center;"><h3>50+</h3><p>STEM Labs</p></div>
+            <div class="flex-item" style="text-align: center;"><h3>15</h3><p>Sports Awards</p></div>
+        </div>
+    </section>
+
+    <!-- 4. ABOUT US (Mission/Vision/History) -->
+    <section id="about">
+        <h2>Who We Are</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h3>Our Mission</h3>
+                <p>To provide high-quality education focused on digital literacy and critical thinking.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Our Vision</h3>
+                <p>To be the leading global hub for young developers and creative minds.</p>
+            </div>
+            <div class="flex-item">
+                <h3>Our Values</h3>
+                <p>Integrity, Innovation, and Inclusivity in every classroom.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5. ACADEMIC PROGRAMS -->
+    <section id="academics">
+        <h2>Academic Excellence</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b" alt="Primary">
+                <h3>Primary School</h3>
+                <p>Foundational learning for ages 6-11.</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" alt="Secondary">
+                <h3>Secondary School</h3>
+                <p>Advanced STEM and Humanities for ages 12-18.</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97" alt="Vocational">
+                <h3>Vocational Training</h3>
+                <p>Specialized coding and graphic design bootcamps.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 6. ADMISSIONS PROCESS -->
+    <section id="admissions">
+        <h2>Join Our Family</h2>
+        <div class="flex-container">
+            <div class="flex-item"><h4>1. Submit Form</h4><p>Complete the online inquiry form.</p></div>
+            <div class="flex-item"><h4>2. Entrance Exam</h4><p>Assess skill levels in Math and English.</p></div>
+            <div class="flex-item"><h4>3. Interview</h4><p>Meet with our student success counselors.</p></div>
+            <div class="flex-item"><h4>4. Enrollment</h4><p>Secure your spot with the registration fee.</p></div>
+        </div>
+    </section>
+
+    <!-- 7. UPCOMING EVENTS -->
+    <section>
+        <h2>School Calendar</h2>
+        <div class="flex-container">
+            <div class="flex-item"><strong>MAY 15</strong><p>Annual Science & Tech Fair</p></div>
+            <div class="flex-item"><strong>JUN 02</strong><p>Inter-School Sports Gala</p></div>
+            <div class="flex-item"><strong>JUL 20</strong><p>Mid-Term Parent Briefing</p></div>
+        </div>
+    </section>
+
+    <!-- 8. NEWS & BLOG -->
+    <section>
+        <h2>Latest Updates</h2>
+        <div class="flex-container">
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="News">
+                <h4>Coding Competition Winners</h4>
+                <p>YAPS students took first place in the Regional Hackathon...</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1497633762265-9d179a990aa6" alt="Library">
+                <h4>New Digital Library</h4>
+                <p>Our library now features 5,000+ e-books for all students.</p>
+            </div>
+            <div class="flex-item">
+                <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" alt="Seminar">
+                <h4>Guest Speaker: AI in Education</h4>
+                <p>Join us next Friday for an insightful talk on AI tools.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 9. GALLERY -->
+    <section>
+        <h2>Campus Life</h2>
+        <div class="flex-container">
+            <div class="flex-item"><img src="https://images.unsplash.com/photo-1541339905195-03f899a5c98b" alt="Graduation"></div>
+            <div class="flex-item"><img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18" alt="Students"></div>
+            <div class="flex-item"><img src="https://images.unsplash.com/photo-1577891729319-f4871c65488f" alt="Classroom"></div>
+            <div class="flex-item"><img src="https://images.unsplash.com/photo-1529333166437-7750a6dd5a70" alt="Sports"></div>
+        </div>
+    </section>
+
+    <!-- 10. FACULTY / STAFF -->
+    <section>
+        <h2>Meet Our Leaders</h2>
+        <div class="flex-container">
+            <div class="flex-item"><strong>Dr. John Doe</strong><p>Principal</p></div>
+            <div class="flex-item"><strong>Mrs. Jane Smith</strong><p>Head of STEM</p></div>
+            <div class="flex-item"><strong>Mr. Alan Turing</strong><p>IT Coordinator</p></div>
+        </div>
+    </section>
+
+    <!-- 11. RESOURCES & DOWNLOADS -->
+    <section>
+        <h2>Resources</h2>
+        <div class="flex-container">
+            <div class="flex-item"><a href="#">Academic Calendar 2026 (PDF)</a></div>
+            <div class="flex-item"><a href="#">School Uniform Policy</a></div>
+            <div class="flex-item"><a href="#">Student Handbook</a></div>
+        </div>
+    </section>
+
+    <!-- 12. FAQ (Accordion Style) -->
+    <section>
+        <h2>Frequently Asked Questions</h2>
+        <div class="flex-container">
+            <div class="flex-item"><strong>What are the fees?</strong><p>Contact the bursar for the current structure.</p></div>
+            <div class="flex-item"><strong>Do you offer boarding?</strong><p>Yes, we have high-standard dormitories.</p></div>
+            <div class="flex-item"><strong>Is there transport?</strong><p>We provide bus services within a 20km radius.</p></div>
+        </div>
+    </section>
+
+    <!-- 13. CONTACT US -->
+    <section id="contact">
+        <h2>Get in Touch</h2>
+        <div class="flex-container">
+            <form class="flex-item" style="flex: 2;">
+                <input type="text" placeholder="Your Name" style="width: 100%; margin-bottom: 10px;">
+                <input type="email" placeholder="Your Email" style="width: 100%; margin-bottom: 10px;">
+                <textarea placeholder="Message" style="width: 100%; height: 100px;"></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+            <div class="flex-item">
+                <h4>Contact Details</h4>
+                <p>📍 Mbarara, Uganda</p>
+                <p>📞 +256 700 000000</p>
+                <p>✉️ info@yapsacademy.com</p>
+            </div>
+            <div class="flex-item">
+                <h4>Working Hours</h4>
+                <p>Mon - Fri: 8AM - 5PM</p>
+                <p>Sat: 9AM - 1PM</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="flex-container">
+            <div class="flex-item">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li>Apply Now</li>
+                    <li>Scholarships</li>
+                    <li>Staff Portal</li>
+                </ul>
+            </div>
+            <div class="flex-item">
+                <h4>Follow Us</h4>
+                <p>Facebook | X | LinkedIn</p>
+            </div>
+            <div class="flex-item">
+                <p>&copy; 2026 YAPS Academy. Designed by YAPS Developers Team.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
